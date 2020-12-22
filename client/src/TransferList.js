@@ -24,9 +24,11 @@ const TransferList = ({ transfers, approveTransfer }) => {
               <td>{transfer.to}</td>
               <td>
                 {transfer.approvals}
-                <button onClick={() => approveTransfer(transfer.id)}>Approve</button>
+                <button onClick={() => approveTransfer(transfer.id)}>
+                  Approve
+                </button>
               </td>
-              <td>{!transfer.sent ? "yes" : "no"}</td>
+              <td>{!transfer.sent ? "no" : "yes"}</td>
             </tr>
           ))}
         </tbody>
